@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/tk/projects/ivy-web/src/app/layout":["static/media/bb2fa0002496a0d2-s.p.woff2","static/media/90bc05a1c1e6bdc3-s.p.woff2","static/media/2374e2c81f93e937-s.p.woff2","static/media/6cc7e6c843635820-s.p.woff2","static/media/092903b20d924cbf-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
