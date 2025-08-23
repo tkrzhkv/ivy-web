@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ReactNode } from "react";
 import localFont from "next/font/local";
-import LayoutClient from "@/app/LayoutClient";
+import Header from "@/components/Header";
 
 const cursive = localFont({
   src: "../fonts/Quetine.woff2",
@@ -44,7 +44,8 @@ export default function RootLayout({
       <body
         className={`${cursive.variable} ${ivy_regular.variable} ${ivy_normal_black.variable} ${ivy_normal_bold.variable} ${ivy_normal_medium.variable}`}
       >
-        <LayoutClient>{children}</LayoutClient>
+        <Header />
+        {children}
       </body>
     </html>
   );

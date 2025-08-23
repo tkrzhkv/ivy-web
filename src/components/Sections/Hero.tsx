@@ -24,9 +24,9 @@ export default function Hero() {
           width={400}
           height={200}
           priority
-          className="w-[300px] md:w-[600px] lg:w-[900px]"
+          className="w-[300px] md:w-[400px] lg:w-[600px]"
         />
-        <p className="mt-8 italic font-cursive text-3xl md:text-5xl lg:text-7xl">
+        <p className="mt-8 italic font-cursive text-2xl md:text-5xl lg:text-5xl">
           We are happy to see you here
         </p>
       </div>

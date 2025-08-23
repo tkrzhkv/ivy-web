@@ -64,8 +64,8 @@ export default function WorkflowSection() {
   ];
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-start justify-center">
-      <div className="w-full h-[700px]">
+    <div className="w-full flex flex-col items-start">
+      <div className="w-full">
         <Tabs tabs={tabs} />
       </div>
     </div>
