@@ -1,4 +1,5 @@
 import Tabs from "@/components/Tabs";
+import Image from "next/image";
 
 export default function WorkflowSection() {
   const tabs = [
@@ -6,7 +7,13 @@ export default function WorkflowSection() {
       id: "workflow",
       label: "EASY WORKFLOW",
       content: (
-        <div className="flex flex-col gap-12 font-ivy_normal_medium">
+        <div
+          className="flex flex-col gap-12 font-ivy_normal_medium tracking-wider"
+          style={{
+            WebkitTextStroke: "1px black",
+            WebkitTextFillColor: "black",
+          }}
+        >
           <p>
             OVER THE YEARS, WE’VE DEVELOPED A SMOOTH AND EFFICIENT WORKFLOW THAT
             WORKS GREAT FOR BOTH US AND OUR CLIENTS.
@@ -28,7 +35,13 @@ export default function WorkflowSection() {
       id: "delivery",
       label: "RAPID DELIVERY",
       content: (
-        <div className="flex flex-col gap-12 font-ivy_normal_medium">
+        <div
+          className="flex flex-col gap-12 font-ivy_normal_medium tracking-wider"
+          style={{
+            WebkitTextStroke: "1px black",
+            WebkitTextFillColor: "black",
+          }}
+        >
           <p>
             WE KNOW HOW EAGER YOUR CLIENTS ARE TO SEE THEIR PHOTOS, SO WE TAKE
             TURNAROUND TIME SERIOUSLY — WITHOUT COMPROMISING QUALITY.
@@ -47,7 +60,13 @@ export default function WorkflowSection() {
       id: "editor",
       label: "PERSONALIZED EDITOR",
       content: (
-        <div className="flex flex-col gap-12 font-ivy_normal_medium">
+        <div
+          className="flex flex-col gap-12 font-ivy_normal_medium tracking-wider"
+          style={{
+            WebkitTextStroke: "1px black",
+            WebkitTextFillColor: "black",
+          }}
+        >
           <p>
             CONSISTENCY IS KEY — AND IT’S AT THE HEART OF EVERYTHING WE DO. WITH
             US, YOU CAN TRUST THAT YOUR EDITING STYLE AND IMAGE QUALITY WILL
@@ -65,6 +84,14 @@ export default function WorkflowSection() {
 
   return (
     <div className="w-full flex flex-col items-start">
+      <Image
+        src="/images/whiteBg.png"
+        alt="Background"
+        fill
+        priority
+        className="object-cover z-0"
+        quality={100}
+      />
       <div className="w-full">
         <Tabs tabs={tabs} />
       </div>

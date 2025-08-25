@@ -5,7 +5,7 @@ export default function ThirdSection() {
   return (
     <section
       id="third-section"
-      className="relative w-screen h-screen flex-shrink-0 flex justify-center items-center text-[#d6c3b3] py-20 border-t-[40px] border-[#7D6962]"
+      className="relative w-screen h-screen flex-shrink-0 flex justify-center items-center text-[#d6c3b3] py-20"
     >
       <Image
         src="/images/brownBg.png"
@@ -17,7 +17,7 @@ export default function ThirdSection() {
       />
 
       <div className="z-20 w-full flex flex-col items-center justify-center">
-        <h2 className="font-cursive bottom-5 relative font-black text-5xl md:text-6xl lg:text-9xl leading-tight rotate-[-9deg] text-center">
+        <h2 className="font-cursive bottom-5 relative font-black text-5xl md:text-6xl lg:text-8xl leading-tight rotate-[-9deg] text-center">
           <span>Why</span> <br />
           <span>choose</span> <br />
           <span>us?</span>
