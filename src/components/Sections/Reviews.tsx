@@ -68,7 +68,7 @@ export default function Reviews() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-wide">
-            HERE'S WHAT OUR SATISFIED
+            HERE&apos;S WHAT OUR SATISFIED
             <br />
             CUSTOMERS HAVE TO SAY:
           </h2>
@@ -168,9 +168,11 @@ function TestimonialCard({
       {/* Profile Image */}
       <div className="flex justify-center mb-8">
         <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-gray-200">
-          <img
+          <Image
             src={testimonial.image || "/placeholder.svg"}
             alt={testimonial.name}
+            width={80}
+            height={80}
             className="w-full h-full object-cover"
           />
         </div>
