@@ -39,7 +39,7 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section className="w-screen min-h-screen">
+    <section className="w-screen">
       <div className="flex flex-col sm:flex-row w-full">
         {/* Левая колонка */}
         <div className="w-full sm:w-[30%] p-6 sm:p-12 flex flex-col justify-between bg-black">
@@ -55,7 +55,7 @@ export default function Services() {
                 PRICING
               </p>
             </div>
-            <div className="space-y-3 mt-6 sm:space-y-6 text-white font-ivy_normal_regular font-[400] text-xs sm:text-base max-w-[390px]">
+            <div className="space-y-3 mt-30 sm:space-y-6 text-white font-ivy_normal_regular font-[400] text-xs sm:text-base max-w-[390px]">
               <p>
                 WE’RE A TEAM OF PROFESSIONAL EDITORS SPECIALIZING IN WEDDING
                 PHOTOGRAPHY.

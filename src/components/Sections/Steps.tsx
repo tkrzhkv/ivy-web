@@ -59,13 +59,13 @@ export default function Steps() {
             className={`flex flex-col ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} items-center relative`}
           >
             {/* Фото */}
-            <div className="relative w-full lg:w-1/2 mb-4 lg:mb-0">
+            <div className="relative mt-20 w-full lg:w-1/2 mb-4 lg:mb-0">
               <div className="border-4 sm:border-8 border-white shadow-lg">
                 <Image
                   src={step.img || "/placeholder.svg"}
                   alt={step.title}
-                  width={600}
-                  height={600}
+                  width={400}
+                  height={500}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -77,7 +77,7 @@ export default function Steps() {
                       ? "left-2 sm:-left-10 lg:-left-20 -rotate-3 sm:-rotate-9"
                       : "right-2 sm:-right-10 lg:-right-20 rotate-3 sm:rotate-9"
                   } 
-                  text-lg sm:text-2xl lg:text-7xl font-cursive text-black whitespace-pre-line
+                  text-4xl  lg:text-7xl font-cursive text-black whitespace-pre-line
                 `}
               >
                 {step.stepNumber}
@@ -97,11 +97,11 @@ export default function Steps() {
           </div>
         ))}
 
-        <div className="w-full sm:w-2/3 mt-8 sm:mt-16 lg:mt-30 bg-[#d4c5b8] py-6 flex justify-center relative">
-          <button className="bg-[#600f16] cursor-pointer absolute -top-3 sm:-top-4 right-2 sm:right-0 text-white font-ivy_normal_bold text-lg sm:text-xl lg:text-2xl px-6 sm:px-12 lg:px-30 py-3 sm:py-6 shadow-md hover:bg-[#4a0e0e] transition-colors">
+        <div className="w-full mb-20 sm:w-2/3 mt-35 sm:mt-16 lg:mt-30 bg-[#d4c5b8] py-6 flex justify-center relative">
+          <button className="bg-[#600f16] cursor-pointer absolute -top-2 sm:-top-4 right-25 sm:right-0 text-white font-ivy_normal_bold text-lg sm:text-xl lg:text-2xl px-12 sm:px-12 lg:px-30 py-4 sm:py-6 shadow-md hover:bg-[#4a0e0e] transition-colors">
             TRY IT NOW
           </button>
-          <p className="absolute -top-20 sm:-top-32 lg:-top-40 -right-4 sm:-right-20 lg:-right-80 rotate-3 sm:rotate-6 lg:rotate-9 text-lg sm:text-2xl lg:text-7xl font-cursive text-[#600f16] whitespace-pre-line">
+          <p className="absolute -top-35 sm:-top-32 lg:-top-40 left-15 sm:-right-20 lg:-right-80 -rotate-15 sm:rotate-6 lg:rotate-9 text-4xl sm:text-2xl lg:text-7xl font-cursive text-[#600f16] whitespace-pre-line">
             the
             <br />
             main

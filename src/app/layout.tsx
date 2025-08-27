@@ -3,6 +3,8 @@ import "./globals.css";
 import { ReactNode } from "react";
 import localFont from "next/font/local";
 import Header from "@/components/Header";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const cursive = localFont({
   src: "../fonts/Quetine.woff2",
