@@ -11,25 +11,25 @@ const testimonials = [
     id: 1,
     text: "Consistent and tailored editing services. Nothing less. So so good!",
     name: "BOND PHOTO STUDIO",
-    image: "/professional-photographer-headshot.png",
+    image: "/images/faces/face1.jpg",
   },
   {
     id: 2,
     text: "Working with the Ivy Streets was an absolute pleasure...",
     name: "MAX EVANS, PHOTOGRAPHER",
-    image: "/male-photographer-with-beard.png",
+    image: "/images/faces/face2.jpg",
   },
   {
     id: 3,
     text: "Outstanding service and attention to detail...",
     name: "SARAH JOHNSON, CREATIVE DIRECTOR",
-    image: "/female-creative-director.png",
+    image: "/images/faces/face3.jpg",
   },
   {
     id: 4,
     text: "Professional, reliable, and incredibly talented...",
     name: "DAVID CHEN, WEDDING PHOTOGRAPHER",
-    image: "/asian-male-photographer.png",
+    image: "/images/faces/face3.jpg",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Reviews() {
       <div className="max-w-7xl w-full relative px-4 lg:px-16">
         {/* Заголовок */}
         <div className="text-start mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-white font-ivy_regular">
+          <h2 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-white font-ivy_regular">
             HERE&apos;S WHAT OUR SATISFIED <br /> CUSTOMERS HAVE TO SAY:
           </h2>
         </div>
@@ -60,7 +60,13 @@ export default function Reviews() {
             modules={[Navigation]}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             spaceBetween={32}
-            slidesPerView={2}
+            slidesPerView={1}
+            breakpoints={{
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 32,
+              },
+            }}
             loop={true}
             className="!overflow-visible mb-8"
           >
@@ -104,12 +110,12 @@ function TestimonialCard({
         </h3>
       </div>
       <div className="flex justify-center mb-6">
-        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-4 border-gray-200">
+        <div className="w-30 h-30 sm:w-30 sm:h-30  rounded-full overflow-hidden border-4 border-gray-200">
           <Image
             src={testimonial.image}
             alt={testimonial.name}
-            width={80}
-            height={80}
+            width={120}
+            height={120}
             className="w-full h-full object-cover"
           />
         </div>
@@ -117,10 +123,17 @@ function TestimonialCard({
       <p className="text-gray-800 text-center leading-relaxed text-sm sm:text-base flex-1 px-2">
         {testimonial.text}
       </p>
-      <div className="text-center mt-6">
+      <div className="flex flex-col items-center justify-center text-center gap-20 mt-6">
         <p className="text-gray-800 font-semibold text-xs sm:text-sm tracking-wide">
           {testimonial.name}
         </p>
+        <Image
+          src="/logo_beige.svg"
+          alt="IVY Logo"
+          width={80}
+          height={80}
+          className="w-20 h-20 sm:w-20 sm:h-20 md:w-28 md:h-28 opacity-90"
+        />
       </div>
     </div>
   );

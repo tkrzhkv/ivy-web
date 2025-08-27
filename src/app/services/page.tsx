@@ -39,7 +39,7 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section className="w-screen">
+    <section className="w-screen bg-black pt-[100px] sm:pt-[80px]">
       <div className="flex flex-col sm:flex-row w-full">
         {/* Левая колонка */}
         <div className="w-full sm:w-[30%] p-6 sm:p-12 flex flex-col justify-between bg-black">
@@ -55,7 +55,7 @@ export default function Services() {
                 PRICING
               </p>
             </div>
-            <div className="space-y-3 mb-12 md:mb-0 mt-10 md:mt-30 tracking-[4px] sm:space-y-6 text-white font-ivy_normal_regular font-[400] text-xs sm:text-base max-w-[490px]">
+            <div className="space-y-3 mb-12 md:mb-0 mt-10 md:mt-15 tracking-[4px] sm:space-y-6 text-white font-ivy_normal_regular font-[400] text-xs sm:text-base max-w-[490px]">
               <p>
                 WE’RE A TEAM OF PROFESSIONAL EDITORS SPECIALIZING IN WEDDING
                 PHOTOGRAPHY.
@@ -67,7 +67,7 @@ export default function Services() {
               </p>
             </div>
           </div>
-          <div className="flex justify-center w-full mb-10 sm:mt-0">
+          <div className="flex justify-center w-full mb-10 sm:mt-10">
             <Image
               src="/logo_beige.svg"
               alt="IVY Logo"
@@ -89,7 +89,7 @@ export default function Services() {
               }`}
             >
               {/* Изображение */}
-              <div className="relative w-full aspect-[2/4] sm:h-1/2">
+              <div className="relative w-full aspect-[4/6] sm:h-1/2">
                 <Image
                   src={service.img}
                   alt={service.title}

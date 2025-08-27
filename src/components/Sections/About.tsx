@@ -26,7 +26,7 @@ export default function ContentSection() {
           </div>
 
           {/* Mobile заголовок */}
-          <h2 className="block md:hidden font-cursive  font-black text-3xl sm:text-5xl leading-tight relative text-center">
+          <h2 className="block md:hidden text-black  font-cursive mb-6 md:mb-0  font-black text-3xl sm:text-5xl leading-tight relative text-center">
             <span className="block rotate-0">Who are we?</span>
           </h2>
           <div
@@ -34,7 +34,7 @@ export default function ContentSection() {
               WebkitTextStroke: "1px #4a0e0e",
               WebkitTextFillColor: "#4a0e0e",
             }}
-            className="space-y-4 sm:space-y-6 font-ivy_regular font-bold text-[10px] sm:text-[16px] md:text-[14px] lg:text-base leading-relaxed max-w-[500px]"
+            className="space-y-4 text-center sm:text-start sm:space-y-6 font-ivy_regular font-bold text-[10px] sm:text-[16px] md:text-[14px] lg:text-base leading-relaxed max-w-[500px]"
           >
             <p>
               WE’RE A TEAM OF PRO EDITORS WHO SPECIALIZE IN WEDDING PHOTOGRAPHY.
@@ -58,7 +58,7 @@ export default function ContentSection() {
           </div>
 
           {/* Mobile заголовок */}
-          <h2 className="block md:hidden font-cursive font-black text-3xl sm:text-5xl leading-tight relative text-center">
+          <h2 className="block md:hidden mb-6 md:mb-0  font-cursive font-black text-3xl sm:text-5xl leading-tight relative text-center text-black ">
             <span className="block rotate-0">What do we do?</span>
           </h2>
 
@@ -84,7 +84,7 @@ export default function ContentSection() {
         </div>
       </div>
       Logo
-      <div className="absolute bottom-8 flex justify-center w-full">
+      <div className="absolute bottom-4 sm:bottom-8 flex justify-center w-full">
         <Image
           src="/flowerLogo.svg"
           alt="IVY Logo"

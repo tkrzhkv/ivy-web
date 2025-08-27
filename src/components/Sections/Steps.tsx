@@ -13,30 +13,30 @@ type Step = {
 const steps: Step[] = [
   {
     id: "1",
-    stepNumber: "step\none", // перенос строки
+    stepNumber: "step\none",
     title: "UPLOAD",
     description: "YOUR PICTURES",
-    img: "/images/step1.jpg",
+    img: "/images/steps/step1.png",
   },
   {
     id: "2",
     stepNumber: "step\ntwo",
     title: "PAY",
     description: "THE INVOICE",
-    img: "/images/step2.jpg",
+    img: "/images/steps/step2.png",
   },
   {
     id: "3",
     stepNumber: "step\nthree",
     title: "RECEIVE",
     description: "EDITED PHOTOS",
-    img: "/images/step3.jpg",
+    img: "/images/steps/step3.png",
   },
 ];
 
 export default function Steps() {
   return (
-    <section className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-20 py-8 sm:py-16 flex flex-col items-center mx-auto text-black">
+    <section className="w-full max-w-[1240px] px-4 sm:px-6 lg:px-20 py-8 sm:py-26 flex flex-col items-center mx-auto text-black overflow-x-hidden">
       {/* Заголовок */}
       <h3
         style={{
@@ -59,14 +59,15 @@ export default function Steps() {
             className={`flex flex-col ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} items-center relative`}
           >
             {/* Фото */}
-            <div className="relative mt-20 w-full lg:w-1/2 mb-4 lg:mb-0">
+            <div className="relative mt-20 w-full max-w-[350px] mb-4 lg:mb-0">
               <div className="border-4 sm:border-8 border-white shadow-lg">
                 <Image
                   src={step.img || "/placeholder.svg"}
                   alt={step.title}
                   width={400}
                   height={500}
-                  className="w-full h-auto object-cover"
+                  className="w-full max-w-[350px] h-auto object-cover"
+                  quality={70}
                 />
               </div>
               <p
@@ -97,11 +98,16 @@ export default function Steps() {
           </div>
         ))}
 
-        <div className="w-full mb-20 sm:w-2/3 mt-35 sm:mt-16 lg:mt-30 bg-[#d4c5b8] py-6 flex justify-center relative">
-          <button className="bg-[#600f16] cursor-pointer absolute -top-2 sm:-top-4 right-25 sm:right-0 text-white font-ivy_normal_bold text-lg sm:text-xl lg:text-2xl px-12 sm:px-12 lg:px-30 py-4 sm:py-6 shadow-md hover:bg-[#4a0e0e] transition-colors">
+        <div className="w-full relative mb-20 md:w-[900px] mt-35 sm:mt-16 lg:mt-30 bg-[#d4c5b8] py-6">
+          <button className="absolute left-1/2 -translate-x-1/2 -top-1.5 sm:-top-12 lg:-top-16 bg-[#600f16] cursor-pointer text-white font-ivy_normal_bold text-lg sm:text-xl lg:text-2xl px-12 sm:px-12 lg:px-30 py-4 sm:py-6 shadow-md hover:bg-[#4a0e0e] transition-colors whitespace-nowrap">
             TRY IT NOW
           </button>
-          <p className="absolute -top-35 sm:-top-32 lg:-top-40 left-15 sm:-right-20 lg:-right-80 -rotate-15 sm:rotate-6 lg:rotate-9 text-4xl sm:text-2xl lg:text-7xl font-cursive text-[#600f16] whitespace-pre-line">
+
+          <p
+            className="
+        absolute -top-60 -right-70 rotate-[9deg]
+        text-4xl sm:text-2xl lg:text-7xl font-cursive text-[#600f16] whitespace-pre-line"
+          >
             the
             <br />
             main
