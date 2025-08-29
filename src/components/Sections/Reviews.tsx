@@ -105,7 +105,7 @@ function TestimonialCard({
   return (
     <div className="bg-white p-6 sm:p-8 h-[550px] sm:h-[600px] shadow-lg flex flex-col w-full">
       <div className="text-center mb-6">
-        <h3 className="text-lg sm:text-xl font-light text-gray-400 tracking-[0.3em]">
+        <h3 className="text-lg sm:text-2xl font-ivy_regular text-gray-600 tracking-[0.3em]">
           REVIEW
         </h3>
       </div>

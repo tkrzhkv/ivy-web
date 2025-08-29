@@ -1,6 +1,5 @@
 "use client";
-
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -11,22 +10,11 @@ import WorkflowSection from "@/components/Sections/WorkflowSection";
 import Services from "@/components/Sections/Services";
 import Steps from "@/components/Sections/Steps";
 import Reviews from "@/components/Sections/Reviews";
-import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    // имитация загрузки Hero (заменишь на реальную загрузку)
-    const timer = setTimeout(() => setLoading(false), 1800);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    if (loading) return;
-
     // Анимации появления
     gsap.utils.toArray<HTMLElement>(".reveal").forEach((el) => {
       gsap.fromTo(
@@ -58,36 +46,11 @@ export default function Page() {
         pin: true,
       },
     });
-  }, [loading]);
+  }, []);
 
   return (
     <div id="wrapper">
       <div id="content" className="relative">
-        {/* 🔹 Лоадер */}
-        <div
-          className={`fixed inset-0 z-50 flex items-center justify-center bg-[#3a0e0e] transition-opacity duration-1000 ${
-            loading ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
-        >
-          <div className="relative flex flex-col items-center">
-            {/* Лого */}
-            <Image
-              src="/logo_short.svg"
-              alt="Logo"
-              width={48}
-              height={48}
-              className="w-48 h-48 animate-pulse"
-            />
-
-            {/* Точки */}
-            <div className="flex absolute top-[101px] -right-[19px] space-x-2 mt-4">
-              <span className="w-[2px] h-[2px] bg-[#EBE7DF] rounded-full animate-pulse [animation-delay:0ms]" />
-              <span className="w-[2px] h-[2px] bg-[#EBE7DF] rounded-full animate-pulse [animation-delay:200ms]" />
-              <span className="w-[2px] h-[2px] bg-[#EBE7DF] rounded-full animate-pulse [animation-delay:400ms]" />
-            </div>
-          </div>
-        </div>
-
         {/* 🔹 Контент */}
         <main className="w-screen bg-[#F6F6F8]">
           <section className="reveal min-h-screen flex items-center justify-center">

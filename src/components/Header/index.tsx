@@ -39,6 +39,9 @@ export default function Header() {
             <Link href="/contacts" className="hover:text-white transition">
               Contacts
             </Link>
+            <Link href="/faq" className="hover:text-white transition">
+              FAQ
+            </Link>
           </nav>
 
           {/* Соцсети и кнопка для десктопа */}
@@ -174,6 +177,7 @@ export default function Header() {
                     { href: "/samples", label: "Samples" },
                     { href: "/about", label: "About Us" },
                     { href: "/contacts", label: "Contacts" },
+                    { href: "/faq", label: "FAQ" },
                   ].map((item, index) => (
                     <motion.div
                       key={item.href}

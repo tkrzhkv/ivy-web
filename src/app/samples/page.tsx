@@ -20,7 +20,7 @@ export default function SamplesPage() {
   return (
     <main className=" h-screen w-full pt-20 bg-[#EBE7DF]">
       <div className="w-full max-w-[1440px] flex flex-col items-center mx-auto pt-10 sm:pt-8">
-        <h1 className="underline font-ivy_regular text-2xl sm:text-4xl text-black">
+        <h1 className="underline font-ivy_regular mb-12 text-2xl sm:text-4xl text-black">
           SAMPLES
         </h1>
 
@@ -57,7 +57,7 @@ export default function SamplesPage() {
           </Swiper>
 
           {/* Кастомные кнопки поверх слайдера */}
-          <div className="flex w-full justify-center gap-6 sm:gap-12 pt-10 px-2">
+          <div className="flex w-full justify-center gap-6 sm:gap-12 pt-20 px-2">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
               className="bg-[#4a0e0e] hover:bg-[#6a0e0e] text-white px-2 sm:px-12 py-2 cursor-pointer"

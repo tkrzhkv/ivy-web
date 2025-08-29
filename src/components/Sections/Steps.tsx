@@ -99,7 +99,7 @@ export default function Steps() {
         ))}
 
         <div className="w-full relative mb-20 md:w-[900px] mt-35 sm:mt-16 lg:mt-30 bg-[#d4c5b8] py-6">
-          <button className="absolute left-1/2 -translate-x-1/2 -top-1.5 sm:-top-12 lg:-top-16 bg-[#600f16] cursor-pointer text-white font-ivy_normal_bold text-lg sm:text-xl lg:text-2xl px-12 sm:px-12 lg:px-30 py-4 sm:py-6 shadow-md hover:bg-[#4a0e0e] transition-colors whitespace-nowrap">
+          <button className="absolute left-1/2 md:left-3/5 -translate-x-1/2 -top-1.5 sm:-top-12 lg:-top-4 bg-[#600f16] cursor-pointer text-white font-ivy_normal_bold text-lg sm:text-xl lg:text-2xl px-12 sm:px-12 lg:px-30 py-4 sm:py-6 shadow-md hover:bg-[#4a0e0e] transition-colors whitespace-nowrap">
             TRY IT NOW
           </button>
 
