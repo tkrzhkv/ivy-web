@@ -34,18 +34,20 @@ export default function Page() {
       );
     });
 
-    // Горизонтальная анимация ChooseUs
-    gsap.to(".chooseus-track", {
-      xPercent: -100,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".chooseus-wrapper",
-        start: "top top",
-        end: "+=1500",
-        scrub: true,
-        pin: true,
-      },
-    });
+    // Горизонтальная анимация ChooseUs только на десктопе
+    if (window.innerWidth >= 768) {
+      gsap.to(".chooseus-track", {
+        xPercent: -100,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".chooseus-wrapper",
+          start: "top top",
+          end: "+=1500",
+          scrub: true,
+          pin: true,
+        },
+      });
+    }
   }, []);
 
   return (
