@@ -43,7 +43,7 @@ export default function Steps() {
           WebkitTextStroke: "2px black",
           WebkitTextFillColor: "black",
         }}
-        className="font-ivy_regular text-2xl sm:text-3xl lg:text-5xl text-center"
+        className="font-ivy_regular pt-20 md:pt-0 text-2xl sm:text-3xl lg:text-5xl text-center"
       >
         FEW SIMPLE STEPS
       </h3>

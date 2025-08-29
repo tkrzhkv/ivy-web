@@ -73,7 +73,7 @@ export default function Tabs({ tabs }: TabsProps) {
         })}
       </div>
 
-      <div className="w-full max-w-[800px] mt-20 md:mt-40 flex-1 text-[14px] text-center md:text-left sm:text-xl space-y-4 leading-relaxed text-[#1a0f0f] font-ivy_regular">
+      <div className="w-full max-w-[800px] px-8 md:px-0 mt-20 md:mt-40 flex-1 text-[14px] text-center md:text-left sm:text-xl space-y-4 leading-relaxed text-[#1a0f0f] font-ivy_regular">
         {tabs.find((tab) => tab.id === activeTab)?.content}
       </div>
     </div>

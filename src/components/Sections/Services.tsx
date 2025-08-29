@@ -55,7 +55,7 @@ export default function Services() {
                 PRICING
               </p>
             </div>
-            <div className="space-y-3 mb-12 md:mb-0 mt-10 md:mt-30 tracking-[4px] sm:space-y-6 text-white font-ivy_normal_regular font-[400] text-xs sm:text-base max-w-[490px]">
+            <div className="space-y-3 px-8 md:px-0 text-center sm:text-start mb-12 md:mb-0 mt-10 md:mt-30 tracking-[4px] sm:space-y-6 text-white font-ivy_normal_regular font-[400] text-xs sm:text-base max-w-[490px]">
               <p>
                 WE’RE A TEAM OF PROFESSIONAL EDITORS SPECIALIZING IN WEDDING
                 PHOTOGRAPHY.
