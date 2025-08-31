@@ -1,9 +1,12 @@
 {
-  "/favicon.ico/route": "/favicon.ico",
   "/_not-found/page": "/_not-found",
-  "/about/page": "/about",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/favicon.ico/route": "/favicon.ico",
+  "/faq/page": "/faq",
   "/page": "/",
-  "/services/page": "/services",
   "/samples/page": "/samples",
-  "/faq/page": "/faq"
+  "/contacts/page": "/contacts",
+  "/services/page": "/services",
+  "/about/page": "/about"
 }

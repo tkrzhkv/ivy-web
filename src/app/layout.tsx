@@ -5,6 +5,10 @@ import Footer from "@/components/Footer";
 import LoaderWrapper from "@/components/LoaderWrapper";
 import { ReactNode } from "react";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 const cursive = localFont({
   src: "../fonts/Quetine.woff2",
   variable: "--font-cursive",
