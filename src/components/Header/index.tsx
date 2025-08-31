@@ -209,7 +209,7 @@ function MobileMenu({
                 transition={{ delay: 0.8, duration: 0.4 }}
               >
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/ivy.streets"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-transform"
@@ -222,7 +222,7 @@ function MobileMenu({
                   />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/ivy.streets"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-transform"

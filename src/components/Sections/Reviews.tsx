@@ -37,7 +37,7 @@ export default function Reviews() {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <section className="relative w-full flex justify-center items-center py-20">
+    <section className="relative w-full flex justify-center items-center pt-20 pb-40">
       <Image
         src="/images/redBg.png"
         alt="Background"

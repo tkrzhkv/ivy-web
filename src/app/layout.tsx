@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
+import Footer from "@/components/Footer";
 
 const cursive = localFont({
   src: "../fonts/Quetine.woff2",
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

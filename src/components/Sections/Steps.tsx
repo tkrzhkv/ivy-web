@@ -1,6 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Modal from "@/components/ui/Modal";
+import OrderForm from "@/components/OrderForm";
+import { useState } from "react";
 
 type Step = {
   id: string;
@@ -35,6 +38,8 @@ const steps: Step[] = [
 ];
 
 export default function Steps() {
+  const [isOrderOpen, setIsOrderOpen] = useState(false);
+
   return (
     <section className="w-full max-w-[1240px] px-4 sm:px-6 lg:px-20 py-8 sm:py-26 flex flex-col items-center mx-auto text-black overflow-x-hidden">
       {/* Заголовок */}
@@ -99,13 +104,16 @@ export default function Steps() {
         ))}
 
         <div className="w-full relative mb-20 md:w-[900px] mt-35 sm:mt-16 lg:mt-30 bg-[#d4c5b8] py-6">
-          <button className="absolute left-1/2 md:left-3/5 -translate-x-1/2 -top-1.5 sm:-top-12 lg:-top-4 bg-[#600f16] cursor-pointer text-white font-ivy_normal_bold text-lg sm:text-xl lg:text-2xl px-12 sm:px-12 lg:px-30 py-4 sm:py-6 shadow-md hover:bg-[#4a0e0e] transition-colors whitespace-nowrap">
+          <button
+            onClick={() => setIsOrderOpen(true)}
+            className="absolute left-1/2 md:left-3/5 -translate-x-1/2 -top-1.5 sm:-top-12 lg:-top-4 bg-[#600f16] cursor-pointer text-white font-ivy_normal_bold text-lg sm:text-xl lg:text-2xl px-12 sm:px-12 lg:px-30 py-4 sm:py-6 shadow-md hover:bg-[#4a0e0e] transition-colors whitespace-nowrap"
+          >
             TRY IT NOW
           </button>
 
           <p
             className="
-        absolute -top-60 -right-70 rotate-[9deg]
+        absolute -top-35 md:-top-60 -right-0 md:-right-[20%] rotate-[9deg]
         text-4xl sm:text-2xl lg:text-7xl font-cursive text-[#600f16] whitespace-pre-line"
           >
             the
@@ -116,6 +124,14 @@ export default function Steps() {
           </p>
         </div>
       </div>
+      <Modal
+        isOpen={isOrderOpen}
+        onClose={() => setIsOrderOpen(false)}
+        title="Make an order"
+        size="lg"
+      >
+        <OrderForm onClose={() => setIsOrderOpen(false)} />
+      </Modal>
     </section>
   );
 }

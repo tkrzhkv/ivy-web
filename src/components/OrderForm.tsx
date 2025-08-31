@@ -9,7 +9,6 @@ import "react-day-picker/dist/style.css";
 export default function OrderForm({ onClose }: { onClose: () => void }) {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [selected, setSelected] = useState<Date | undefined>();
   const [openCalendar, setOpenCalendar] = useState(false);
 
@@ -129,7 +128,6 @@ export default function OrderForm({ onClose }: { onClose: () => void }) {
       )
       .then(
         () => {
-          setSuccess(true);
           setLoading(false);
           formRef.current?.reset();
           onClose();
@@ -144,7 +142,6 @@ export default function OrderForm({ onClose }: { onClose: () => void }) {
           setErrors({});
         },
         () => {
-          setSuccess(false);
           setLoading(false);
           alert("Error occured during order. Please try again.");
         },
