@@ -10,14 +10,14 @@ type Service = {
   img: string;
 };
 
-const services: Service[] = [
+export const services: Service[] = [
   {
     id: "1",
     title: "Color correction",
     price: "[ COLOR CORRECTION – $0.30 PER PHOTO ]",
     description:
       "WE CAREFULLY CRAFT A COLOR LOOK THAT\nFITS YOUR STYLE AND ENHANCES THE MOOD\nOF THE SHOOT. WORKING WITH RAW FILES,\nWE ADJUST EXPOSURE, WHITE BALANCE,\nTONES, CONTRAST, AND MORE — TO GIVE\nYOUR IMAGES THE BEST POSSIBLE FINISH.",
-    img: "/images/services/service1.png",
+    img: "/images/services/service1.jpg",
   },
   {
     id: "2",
@@ -25,7 +25,7 @@ const services: Service[] = [
     price: "[ RETOUCHING – $0.30 PER PHOTO ]",
     description:
       "WE DELIVER CLEAN, POLISHED IMAGES\nWHILE PRESERVING A NATURAL LOOK.\nOUR RETOUCHING INCLUDES SKIN\nSMOOTHING, BODY SHAPING, REMOVAL\nOF DISTRACTING ELEMENTS, AND FINAL\nREFINEMENTS TO MAKE EACH PHOTO\nSHINE.",
-    img: "/images/services/service2.png",
+    img: "/images/services/service2.jpg",
   },
   {
     id: "3",
@@ -33,7 +33,7 @@ const services: Service[] = [
     price: "[ CULLING – $25 PER 1,000 PHOTOS ]",
     description:
       "WE TAKE THE TIME-CONSUMING TASK\nOF SELECTING THE BEST SHOTS OFF\nYOUR PLATE, SO YOU CAN FOCUS ON\nWHAT MATTERS MOST.\nCLEAN, EFFICIENT, AND TAILORED TO\nYOUR PREFERENCES — WE HELP\nSTREAMLINE YOUR WORKFLOW FROM\nTHE START.",
-    img: "/images/services/service3.png",
+    img: "/images/services/service3.jpg",
   },
 ];
 

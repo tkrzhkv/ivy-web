@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         {/* Лоадер */}
         {loading && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#3a0e0e] transition-opacity duration-500">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#4b0d17] transition-opacity duration-500">
             <div className="relative flex flex-col items-center">
               {/* Лого */}
               <Image

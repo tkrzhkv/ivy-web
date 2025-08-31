@@ -1,45 +1,11 @@
 "use client";
 
 import Image from "next/image";
-
-type Service = {
-  id: string;
-  title: string;
-  price: string;
-  description: string;
-  img: string;
-};
-
-const services: Service[] = [
-  {
-    id: "1",
-    title: "Color correction",
-    price: "[ COLOR CORRECTION – $0.30 PER PHOTO ]",
-    description:
-      "WE CAREFULLY CRAFT A COLOR LOOK THAT\nFITS YOUR STYLE AND ENHANCES THE MOOD\nOF THE SHOOT. WORKING WITH RAW FILES,\nWE ADJUST EXPOSURE, WHITE BALANCE,\nTONES, CONTRAST, AND MORE — TO GIVE\nYOUR IMAGES THE BEST POSSIBLE FINISH.",
-    img: "/images/services/service1.png",
-  },
-  {
-    id: "2",
-    title: "Retouching",
-    price: "[ RETOUCHING – $0.30 PER PHOTO ]",
-    description:
-      "WE DELIVER CLEAN, POLISHED IMAGES\nWHILE PRESERVING A NATURAL LOOK.\nOUR RETOUCHING INCLUDES SKIN\nSMOOTHING, BODY SHAPING, REMOVAL\nOF DISTRACTING ELEMENTS, AND FINAL\nREFINEMENTS TO MAKE EACH PHOTO\nSHINE.",
-    img: "/images/services/service2.png",
-  },
-  {
-    id: "3",
-    title: "Culling",
-    price: "[ CULLING – $25 PER 1,000 PHOTOS ]",
-    description:
-      "WE TAKE THE TIME-CONSUMING TASK\nOF SELECTING THE BEST SHOTS OFF\nYOUR PLATE, SO YOU CAN FOCUS ON\nWHAT MATTERS MOST.\nCLEAN, EFFICIENT, AND TAILORED TO\nYOUR PREFERENCES — WE HELP\nSTREAMLINE YOUR WORKFLOW FROM\nTHE START.",
-    img: "/images/services/service3.png",
-  },
-];
+import { services } from "@/components/Sections/Services";
 
 export default function Services() {
   return (
-    <section className="w-screen bg-black pt-[100px] sm:pt-[80px]">
+    <section className="w-screen">
       <div className="flex flex-col sm:flex-row w-full">
         {/* Левая колонка */}
         <div className="w-full sm:w-[30%] p-6 sm:p-12 flex flex-col justify-between bg-black">
@@ -55,7 +21,7 @@ export default function Services() {
                 PRICING
               </p>
             </div>
-            <div className="space-y-3 mb-12 md:mb-0 mt-10 md:mt-15 tracking-[4px] sm:space-y-6 text-white font-ivy_normal_regular font-[400] text-xs sm:text-base max-w-[490px]">
+            <div className="space-y-3 px-8 md:px-0 text-center sm:text-start mb-12 md:mb-0 mt-10 md:mt-30 tracking-[4px] sm:space-y-6 text-white font-ivy_normal_regular font-[400] text-xs sm:text-base max-w-[490px]">
               <p>
                 WE’RE A TEAM OF PROFESSIONAL EDITORS SPECIALIZING IN WEDDING
                 PHOTOGRAPHY.
@@ -67,7 +33,7 @@ export default function Services() {
               </p>
             </div>
           </div>
-          <div className="flex justify-center w-full mb-10 sm:mt-10">
+          <div className="flex justify-center w-full mb-10 sm:mt-0">
             <Image
               src="/logo_beige.svg"
               alt="IVY Logo"
@@ -89,7 +55,7 @@ export default function Services() {
               }`}
             >
               {/* Изображение */}
-              <div className="relative w-full aspect-[4/6] sm:h-1/2">
+              <div className="relative w-full aspect-[2/4] sm:h-1/2">
                 <Image
                   src={service.img}
                   alt={service.title}
