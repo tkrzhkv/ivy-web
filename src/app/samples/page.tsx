@@ -1,24 +1,39 @@
 "use client";
 import "swiper/css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { ArrowIcon } from "@/components/Icons/ArrowIcon";
 import type { Swiper as SwiperType } from "swiper";
+import gsap from "gsap";
 
 const samples = [
-  { id: 1, image: "/images/img.png" },
-  { id: 2, image: "/images/img.png" },
-  { id: 3, image: "/images/img.png" },
-  { id: 4, image: "/images/img.png" },
+  { id: 1, image: "/images/beforeAfter/carBefore.jpg" },
+  { id: 2, image: "/images/beforeAfter/carAfter.jpg " },
+  { id: 3, image: "/images/beforeAfter/womanBefore.jpg" },
+  { id: 4, image: "/images/beforeAfter/womanAfter.jpg" },
+  { id: 5, image: "/images/beforeAfter/coupleBefore.jpg" },
+  { id: 6, image: "/images/beforeAfter/coupleAfter.jpg" },
 ];
 
 export default function SamplesPage() {
   const swiperRef = useRef<SwiperType | null>(null);
 
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    gsap.fromTo(
+      containerRef.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 2.2, ease: "power3.out" },
+    );
+  }, []);
+
   return (
-    <main className=" h-screen w-full pt-20 bg-[#EBE7DF]">
+    <main ref={containerRef} className=" h-screen w-full pt-20 bg-[#EBE7DF]">
       <div className="w-full max-w-[1440px] flex flex-col items-center mx-auto pt-10 sm:pt-8">
         <h1 className="underline font-ivy_regular mb-12 text-2xl sm:text-4xl text-black">
           SAMPLES

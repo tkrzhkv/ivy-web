@@ -15,6 +15,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
   useEffect(() => {
+    // Чистим все триггеры перед созданием новых
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+
     // Анимации появления
     gsap.utils.toArray<HTMLElement>(".reveal").forEach((el) => {
       gsap.fromTo(
@@ -48,12 +51,16 @@ export default function Page() {
         },
       });
     }
+
+    // ✅ cleanup при размонтировании
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
   }, []);
 
   return (
     <div id="wrapper">
       <div id="content" className="relative">
-        {/* 🔹 Контент */}
         <main className="w-screen bg-[#F6F6F8]">
           <section className="reveal min-h-screen flex items-center justify-center">
             <Hero />

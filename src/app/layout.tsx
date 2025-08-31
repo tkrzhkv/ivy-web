@@ -1,14 +1,9 @@
-"use client";
-
 import "./globals.css";
-import { ReactNode, useEffect, useState } from "react";
 import localFont from "next/font/local";
 import Header from "@/components/Header";
-import { usePathname } from "next/navigation";
-import Image from "next/image";
-import "swiper/css";
-import "swiper/css/navigation";
 import Footer from "@/components/Footer";
+import LoaderWrapper from "@/components/LoaderWrapper";
+import { ReactNode } from "react";
 
 const cursive = localFont({
   src: "../fonts/Quetine.woff2",
@@ -35,47 +30,51 @@ const ivy_normal_medium = localFont({
   variable: "--font-ivy_normal_medium",
 });
 
+export const metadata = {
+  title: "THE IVY STREETS — Wedding Photo Editing",
+  description:
+    "Professional wedding photo editing service. Fast turnaround, consistent style, and trusted by photographers worldwide.",
+  keywords: [
+    "wedding photo editing",
+    "professional editing",
+    "IVY STR.",
+    "the ivy streets",
+  ],
+  openGraph: {
+    title: "THE IVY STREETS — Wedding Photo Editing",
+    description:
+      "Save time on editing — let our pro editors handle your wedding photos.",
+    url: "https://theivystreets.com",
+    siteName: "THE IVY STREETS",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The IVY Streets Wedding Editing",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IVY STR. — Wedding Photo Editing",
+    description: "Save time on editing with IVY STR. professionals.",
+    images: ["/og-image.jpg"],
+  },
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, [pathname]);
-
   return (
     <html lang="en">
       <body
         className={`${cursive.variable} ${ivy_regular.variable} ${ivy_normal_black.variable} ${ivy_normal_bold.variable} ${ivy_normal_medium.variable}`}
       >
-        {/* Лоадер */}
-        {loading && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#4b0d17] transition-opacity duration-500">
-            <div className="relative flex flex-col items-center">
-              {/* Лого */}
-              <Image
-                src="/logo_short.svg"
-                alt="Logo"
-                width={48}
-                height={48}
-                className="w-48 h-48 animate-pulse"
-              />
-
-              {/* Точки */}
-              <div className="flex absolute top-[101px] -right-[19px] space-x-2 mt-4">
-                <span className="w-[2px] h-[2px] bg-[#EBE7DF] rounded-full animate-pulse [animation-delay:0ms]" />
-                <span className="w-[2px] h-[2px] bg-[#EBE7DF] rounded-full animate-pulse [animation-delay:200ms]" />
-                <span className="w-[2px] h-[2px] bg-[#EBE7DF] rounded-full animate-pulse [animation-delay:400ms]" />
-              </div>
-            </div>
-          </div>
-        )}
-
-        <Header />
-        {children}
-        <Footer />
+        <LoaderWrapper>
+          <Header />
+          {children}
+          <Footer />
+        </LoaderWrapper>
       </body>
     </html>
   );

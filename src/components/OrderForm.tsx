@@ -12,7 +12,6 @@ export default function OrderForm({ onClose }: { onClose: () => void }) {
   const [selected, setSelected] = useState<Date | undefined>();
   const [openCalendar, setOpenCalendar] = useState(false);
 
-  // Состояние для значений полей
   const [formData, setFormData] = useState({
     name: "",
     files: "",
@@ -21,21 +20,17 @@ export default function OrderForm({ onClose }: { onClose: () => void }) {
     notes: "",
   });
 
-  // Состояние для ошибок
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-  // Валидация формы
   const validateForm = () => {
     const newErrors: { [key: string]: string } = {};
 
-    // Валидация имени
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     } else if (formData.name.trim().length < 2) {
       newErrors.name = "Name must be at least 2 characters";
     }
 
-    // Валидация ссылки на файлы
     if (!formData.files.trim()) {
       newErrors.files = "Link to files is required";
     } else if (
@@ -45,7 +40,6 @@ export default function OrderForm({ onClose }: { onClose: () => void }) {
       newErrors.files = "Please enter a valid URL";
     }
 
-    // Валидация контакта (email или телефон)
     if (!formData.contact.trim()) {
       newErrors.contact = "Email or phone is required";
     } else {
@@ -60,19 +54,16 @@ export default function OrderForm({ onClose }: { onClose: () => void }) {
       }
     }
 
-    // Валидация дедлайна
     if (!selected) {
       newErrors.deadline = "Please select a deadline";
     }
 
-    // Валидация Instagram (обязательное поле)
     if (!formData.instagram.trim()) {
       newErrors.instagram = "Instagram handle is required";
     } else if (!formData.instagram.startsWith("@")) {
       newErrors.instagram = "Instagram handle should start with @";
     }
 
-    // Валидация Notes (обязательное поле)
     if (!formData.notes.trim()) {
       newErrors.notes = "Notes are required";
     } else if (formData.notes.trim().length < 10) {
@@ -83,7 +74,6 @@ export default function OrderForm({ onClose }: { onClose: () => void }) {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Обработка изменений в полях
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -93,7 +83,6 @@ export default function OrderForm({ onClose }: { onClose: () => void }) {
       [name]: value,
     }));
 
-    // Очищаем ошибку при изменении поля
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -105,7 +94,6 @@ export default function OrderForm({ onClose }: { onClose: () => void }) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Валидация перед отправкой
     if (!validateForm()) {
       return;
     }

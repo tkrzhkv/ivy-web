@@ -1,6 +1,23 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+
 export default function FAQPage() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    gsap.fromTo(
+      containerRef.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 2.2, ease: "power3.out" },
+    );
+  }, []);
+
   return (
-    <div className="w-full min-h-screen flex flex-col">
+    <div ref={containerRef} className="w-full min-h-screen flex flex-col">
       {/* Header */}
       <div className="bg-stone-200 px-8 pt-30">
         <div className="mx-auto w-full">

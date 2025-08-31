@@ -10,7 +10,7 @@ type Service = {
   img: string;
 };
 
-export const services: Service[] = [
+const services: Service[] = [
   {
     id: "1",
     title: "Color correction",

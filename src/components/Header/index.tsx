@@ -62,7 +62,7 @@ function DesktopNav() {
 // ---------------- Socials and Order Button ----------------
 function SocialsAndOrderButton({ onOrderClick }: { onOrderClick: () => void }) {
   return (
-    <div className="hidden md:flex items-center space-x-3 lg:space-x-10">
+    <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
       {/* На планшетах скрываем соцсети */}
       <a
         href="https://facebook.com"

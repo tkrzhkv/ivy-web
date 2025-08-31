@@ -34,7 +34,7 @@ export default function ContentSection() {
               WebkitTextStroke: "1px #4a0e0e",
               WebkitTextFillColor: "#4a0e0e",
             }}
-            className="space-y-4 text-center sm:text-start sm:space-y-6 font-ivy_regular font-bold text-[10px] sm:text-[16px] md:text-[14px] lg:text-base leading-relaxed max-w-[500px]"
+            className="space-y-4 text-center sm:space-y-6 font-ivy_regular font-bold text-[10px] sm:text-[16px] md:text-[14px] lg:text-base leading-relaxed max-w-[500px] md:max-w-[600px]"
           >
             <p>
               WE’RE A TEAM OF PRO EDITORS WHO SPECIALIZE IN WEDDING PHOTOGRAPHY.
@@ -52,7 +52,7 @@ export default function ContentSection() {
 
         {/* Right Column */}
         <div className="w-full flex flex-col items-center justify-center text-center">
-          <div className="hidden mb-6 md:flex flex-col items-center justify-center leading-[72px] text-black font-cursive font-black text-3xl sm:text-4xl md:text-4xl lg:text-6xl xl:text-7xl relative">
+          <div className="hidden mb-13 md:flex flex-col items-center justify-center leading-[72px] text-black font-cursive font-black text-3xl sm:text-4xl md:text-4xl lg:text-6xl xl:text-7xl relative">
             <p className="block rotate-[4deg]">What do</p>
             <p className="block mt-2 rotate-[9deg]">we do?</p>
           </div>
@@ -68,7 +68,7 @@ export default function ContentSection() {
               WebkitTextStroke: "1px #4a0e0e",
               WebkitTextFillColor: "#4a0e0e",
             }}
-            className="space-y-4 sm:space-y-6 font-ivy_regular font-bold text-[10px] sm:text-[16px] md:text-[14px] lg:text-base leading-relaxed max-w-[500px] text-center md:text-left"
+            className="space-y-4 sm:space-y-6 font-ivy_regular font-bold text-[10px] sm:text-[16px] md:text-[14px] lg:text-base leading-relaxed max-w-[500px] md:max-w-[600px] text-center"
           >
             <p>WE WORK WITH YOUR RAW FILES OR LIGHTROOM CATALOGS.</p>
             <p>

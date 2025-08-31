@@ -8,10 +8,9 @@ const letterAnimation: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 1.5 + i * 0.05,
-      type: "spring",
-      stiffness: 300,
-      damping: 20,
+      delay: 1.0 + i * 0.05,
+      duration: 0.5,
+      ease: "easeOut",
     },
   }),
 };
@@ -24,11 +23,16 @@ export default function Hero() {
       id="hero-section"
       className="absolute inset-0 w-screen h-screen flex flex-col items-center justify-center text-center text-[#d6c3b3] overflow-hidden"
     >
+      {/* Главный заголовок для SEO */}
+      <h1 className="sr-only">Professional Wedding Photo Editing Service</h1>
+
+      {/* Фоновое изображение */}
       <Image
         src="/images/hero.png"
-        alt="Background"
+        alt="Wedding photo background with editing service theme"
         fill
         priority
+        aria-hidden="true"
         className="object-cover"
         sizes="(max-width: 768px) 100vw,
                (max-width: 1200px) 50vw,
@@ -36,14 +40,15 @@ export default function Hero() {
       />
 
       <div className="flex flex-col items-center relative z-10 text-center px-4">
+        {/* Логотип */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 1.5 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 1 }}
         >
           <Image
             src="/logo_long.svg"
-            alt="IVY STR."
+            alt="IVY STR. logo"
             width={400}
             height={200}
             priority
@@ -51,7 +56,8 @@ export default function Hero() {
           />
         </motion.div>
 
-        <p className="mt-8 italic font-cursive text-2xl md:text-5xl lg:text-5xl flex flex-wrap justify-center">
+        {/* Подзаголовок */}
+        <h2 className="mt-8 italic font-cursive text-2xl md:text-5xl lg:text-5xl flex flex-wrap justify-center">
           {text.split("").map((char, index) => (
             <motion.span
               key={index}
@@ -64,7 +70,7 @@ export default function Hero() {
               {char === " " ? "\u00A0" : char}
             </motion.span>
           ))}
-        </p>
+        </h2>
       </div>
     </section>
   );
