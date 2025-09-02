@@ -83,7 +83,7 @@ export default function WorkflowSection() {
   ];
 
   return (
-    <div className="w-full flex flex-col items-start">
+    <div className="w-full pb-20 flex flex-col items-start">
       <Image
         src="/images/whiteBg.png"
         alt="Background"

@@ -52,7 +52,7 @@ export const metadata = {
     siteName: "THE IVY STREETS",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "The IVY Streets Wedding Editing",
@@ -64,7 +64,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "IVY STR. — Wedding Photo Editing",
     description: "Save time on editing with IVY STR. professionals.",
-    images: ["/og-image.jpg"],
+    images: ["/images/og-image.jpg"],
   },
 };
 

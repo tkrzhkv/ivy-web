@@ -102,7 +102,7 @@ export default function Services() {
 
               {/* Текст */}
               <div className="flex flex-col justify-center items-center w-full  bg-white p-4 min-h-[400px] sm:min-h-auto sm:h-1/2">
-                <h2 className="text-lg sm:text-xl md:text-xl font-cursive font-bold mb-3 text-black text-center">
+                <h2 className="text-3xl sm:text-xl md:text-3xl font-cursive font-bold mb-3 text-black text-center">
                   {service.title}
                 </h2>
                 <p className="mb-8 sm:mb-2 text-[14px] sm:text-xs font-ivy_normal_bold text-[#4a0e0e] text-center">

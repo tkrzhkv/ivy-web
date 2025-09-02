@@ -26,10 +26,16 @@ const testimonials = [
     image: "/images/faces/face3.jpg",
   },
   {
-    id: 4,
-    text: "Professional, reliable, and incredibly talented...",
-    name: "DAVID CHEN, WEDDING PHOTOGRAPHER",
-    image: "/images/faces/face3.jpg",
+    id: 5,
+    text: "The edits were stunning and delivered so quickly. My clients were absolutely thrilled!",
+    name: "EMILY WATSON, BRIDE",
+    image: "/images/faces/face4.jpg",
+  },
+  {
+    id: 6,
+    text: "I loved how natural and elegant the photos turned out. Truly exceeded my expectations!",
+    name: "SOPHIA MARTINEZ, WEDDING PLANNER",
+    image: "/images/faces/face5.jpg",
   },
 ];
 

@@ -57,7 +57,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Подзаголовок */}
-        <h2 className="mt-8 italic font-cursive text-2xl md:text-5xl lg:text-5xl flex flex-wrap justify-center">
+        <h2 className="mt-8 italic font-cursive text-2xl md:text-5xl lg:text-5xl flex flex-wrap justify-center antialiased">
           {text.split("").map((char, index) => (
             <motion.span
               key={index}

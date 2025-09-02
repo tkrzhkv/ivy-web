@@ -8,14 +8,15 @@ import { ArrowIcon } from "@/components/Icons/ArrowIcon";
 import type { Swiper as SwiperType } from "swiper";
 import gsap from "gsap";
 
-const samples = [
-  { id: 1, image: "/images/beforeAfter/carBefore.jpg" },
-  { id: 2, image: "/images/beforeAfter/carAfter.jpg " },
-  { id: 3, image: "/images/beforeAfter/womanBefore.jpg" },
-  { id: 4, image: "/images/beforeAfter/womanAfter.jpg" },
-  { id: 5, image: "/images/beforeAfter/coupleBefore.jpg" },
-  { id: 6, image: "/images/beforeAfter/coupleAfter.jpg" },
-];
+const samples = Array.from({ length: 17 * 2 }, (_, i) => {
+  const pairIndex = Math.floor(i / 2) + 1;
+  const isBefore = i % 2 === 0;
+
+  return {
+    id: i + 1,
+    image: `/images/${isBefore ? "before" : "after"}/${pairIndex}.jpg`,
+  };
+});
 
 export default function SamplesPage() {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -33,7 +34,7 @@ export default function SamplesPage() {
   }, []);
 
   return (
-    <main ref={containerRef} className=" h-screen w-full pt-20 bg-[#EBE7DF]">
+    <main ref={containerRef} className="w-full py-20 bg-[#EBE7DF]">
       <div className="w-full max-w-[1440px] flex flex-col items-center mx-auto pt-10 sm:pt-8">
         <h1 className="underline font-ivy_regular mb-12 text-2xl sm:text-4xl text-black">
           SAMPLES
